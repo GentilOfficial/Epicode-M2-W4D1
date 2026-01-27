@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="/assets/style.css" />
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <h1>M2 W4D1</h1>
+      </div>
+    </div>
+    <main class="container">
+      <section class="row input-fields">
+        <h2>Cerca un lavoro</h2>
+        <div class="inline-fields">
+          <div class="input-group">
+            <label for="jobLocationField">Luogo</label>
+            <input
+              type="text"
+              id="jobLocationField"
+              placeholder="US, NY, New York"
+            />
+          </div>
+          <div class="input-group">
+            <label for="jobTitleField">Mansione</label>
+            <input
+              type="text"
+              id="jobTitleField"
+              placeholder="Backend Developer"
+            />
+          </div>
+        </div>
+        <button type="button" id="searchJobButton">Cerca</button>
+      </section>
+      <section class="row grid" id="jobsFoundContainer"></section>
+    </main>
     <script src="/assets/scaricabile.js"></script>
   </body>
 </html>

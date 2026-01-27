@@ -147,3 +147,55 @@ function searchJob(location, title) {
 }
 
 console.log(searchJob("US", "dev"))
+
+function clearNode(node) {
+  node.innerHTML = ""
+}
+
+function createJobCard(location, title) {
+  const cardNode = document.createElement("div")
+  const titleNode = document.createElement("h3")
+  const locationNode = document.createElement("p")
+
+  cardNode.classList.add("card")
+
+  titleNode.textContent = title
+  locationNode.textContent = location
+
+  cardNode.appendChild(titleNode)
+  cardNode.appendChild(locationNode)
+
+  return cardNode
+}
+
+function createResultResume(text) {
+  const countFooterNode = document.createElement("p")
+  countFooterNode.classList.add("resume")
+  countFooterNode.textContent = text
+  return countFooterNode
+}
+
+window.addEventListener("load", () => {
+  const jobLocationField = document.getElementById("jobLocationField")
+  const jobTitleField = document.getElementById("jobTitleField")
+  const searchJobButton = document.getElementById("searchJobButton")
+  const resultContainer = document.getElementById("jobsFoundContainer")
+
+  searchJobButton.addEventListener("click", () => {
+    let jobsFound = searchJob(jobLocationField.value, jobTitleField.value)
+
+    if (!resultContainer.classList.contains("separator")) {
+      resultContainer.classList.add("separator")
+    }
+
+    clearNode(resultContainer)
+
+    for (let job of jobsFound.result) {
+      resultContainer.appendChild(createJobCard(job.location, job.title))
+    }
+
+    resultContainer.appendChild(
+      createResultResume(`Lavori trovati: ${jobsFound.count}`),
+    )
+  })
+})

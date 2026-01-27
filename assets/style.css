@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background: #051923;
+  color: #f1f1f1;
+}
+
+h1 {
+  color: #00a6fb;
+  text-align: center;
+  text-shadow: 2px 3px 0.5em rgba(0, 166, 251, 0.3);
+}
+
+.justify {
+  text-align: justify;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 1.5em;
+  padding: 1em;
+}
+
+.input-fields {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.input-group label {
+  position: absolute;
+  top: -1em;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 0.75em;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.5em 1.75em;
+  border-radius: 1em;
+  border: none;
+  border: 1px solid transparent;
+}
+
+input:focus {
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  border: 1px solid #757575;
+}
+
+button {
+  width: 100%;
+  padding: 0.5em 1.5em;
+  border-radius: 1em;
+  border: 1px solid transparent;
+  background: #006494;
+  color: #f1f1f1;
+}
+
+button:hover {
+  cursor: pointer;
+  border: 1px solid #003554;
+}
+
+button:focus {
+  background: #005780;
+}
+
+.grid {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  flex: auto;
+  padding: 1em;
+  border-radius: 1em;
+  background: #f1f1f1;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.card h3 {
+  font-style: italic;
+}
+
+.card p {
+  color: #4c4c4c;
+}
+
+.card p::before {
+  content: "📍";
+  margin-right: 0.15em;
+}
+
+.resume {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+.separator {
+  position: relative;
+}
+
+.separator::after {
+  content: "";
+  position: absolute;
+  top: -0.75em;
+  left: 50%;
+  width: 50%;
+  min-width: 10em;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-50%);
+  border-radius: 1.5em;
+}
