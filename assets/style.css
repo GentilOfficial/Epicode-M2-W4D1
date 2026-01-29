@@ -11,6 +11,7 @@ body {
   font-family: "Outfit", sans-serif;
   background: #051923;
   color: #f1f1f1;
+  font-size: 1rem;
 }
 
 h1 {
@@ -36,6 +37,7 @@ h1 {
 .input-fields {
   max-width: 480px;
   margin: 0 auto;
+  text-shadow: 2px 3px 10em rgba(255, 255, 255, 0.3);
 }
 
 .input-group {
@@ -47,8 +49,12 @@ h1 {
 
 .input-group label {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15em;
   top: -1em;
-  left: 0;
+  left: 1em;
   transform: translateY(-50%);
   font-size: 0.75em;
 }
@@ -63,29 +69,39 @@ h1 {
 input {
   width: 100%;
   padding: 0.5em 1.75em;
-  border-radius: 1em;
-  border: none;
+  border-radius: 1.5em;
   border: 1px solid transparent;
+  box-shadow: 2px 3px 5em rgba(255, 255, 255, 0.3);
 }
 
 input:focus {
-  padding: 0.5em 1.5em;
-  border-radius: 1em;
   border: 1px solid #757575;
+  box-shadow: 2px 3px 5em rgba(255, 255, 255, 0.4);
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 0.5em 1.5em;
-  border-radius: 1em;
+  border-radius: 1.5em;
   border: 1px solid transparent;
   background: #006494;
   color: #f1f1f1;
+  gap: 0.5em;
+  box-shadow: 2px 3px 5em rgba(0, 166, 251, 0.3);
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
 }
 
 button:hover {
   cursor: pointer;
   border: 1px solid #003554;
+  box-shadow: 2px 3px 5em rgba(0, 166, 251, 0.1);
 }
 
 button:focus {
@@ -102,13 +118,14 @@ button:focus {
 
 .card {
   flex: auto;
-  padding: 1em;
-  border-radius: 1em;
+  padding: 1.2em;
+  border-radius: 1.5em;
   background: #f1f1f1;
   color: #1f1f1f;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  box-shadow: 0 0 1em rgba(255, 255, 255, 0.3);
 }
 
 .card h3 {
@@ -128,6 +145,14 @@ button:focus {
   width: 100%;
   text-align: center;
   padding: 1em;
+  font-size: 0.8em;
+}
+
+.resume.error {
+  max-width: 30em;
+  background: rgba(255, 100, 100, 0.3);
+  border: 1px solid rgba(255, 100, 100, 0.5);
+  border-radius: 1.5em;
 }
 
 .separator {
@@ -145,4 +170,5 @@ button:focus {
   background: rgba(255, 255, 255, 0.3);
   transform: translateX(-50%);
   border-radius: 1.5em;
+  box-shadow: 0 0 1em rgba(255, 255, 255, 0.3);
 }

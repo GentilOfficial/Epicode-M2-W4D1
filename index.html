@@ -9,15 +9,17 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1>M2 W4D1</h1>
+        <h1>Stai cercando un lavoro?</h1>
       </div>
     </div>
     <main class="container">
       <section class="row input-fields">
-        <h2>Cerca un lavoro</h2>
+        <h2>Cosa stai cercando?</h2>
         <div class="inline-fields">
           <div class="input-group">
-            <label for="jobLocationField">Luogo</label>
+            <label for="jobLocationField">
+              <i data-lucide="map-pin" class="icon"></i> Luogo
+            </label>
             <input
               type="text"
               id="jobLocationField"
@@ -25,7 +27,10 @@
             />
           </div>
           <div class="input-group">
-            <label for="jobTitleField">Mansione</label>
+            <label for="jobTitleField">
+              <i data-lucide="hard-hat" class="icon"></i>
+              Mansione
+            </label>
             <input
               type="text"
               id="jobTitleField"
@@ -33,10 +38,16 @@
             />
           </div>
         </div>
-        <button type="button" id="searchJobButton">Cerca</button>
+        <button type="button" id="searchJobButton">
+          <i data-lucide="search" class="icon"></i>Cerca
+        </button>
       </section>
       <section class="row grid" id="jobsFoundContainer"></section>
     </main>
     <script src="/assets/scaricabile.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons()
+    </script>
   </body>
 </html>

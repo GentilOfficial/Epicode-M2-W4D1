@@ -168,9 +168,12 @@ function createJobCard(location, title) {
   return cardNode
 }
 
-function createResultResume(text) {
+function createResultResume(text, showAsError = false) {
   const countFooterNode = document.createElement("p")
   countFooterNode.classList.add("resume")
+  if (showAsError) {
+    countFooterNode.classList.add("error")
+  }
   countFooterNode.textContent = text
   return countFooterNode
 }
@@ -195,7 +198,12 @@ window.addEventListener("load", () => {
     }
 
     resultContainer.appendChild(
-      createResultResume(`Lavori trovati: ${jobsFound.count}`),
+      createResultResume(
+        jobsFound.count > 0
+          ? `Lavori trovati: ${jobsFound.count}`
+          : "Spiacenti, non sono stati trovati annunci con questi criteri.",
+        jobsFound.count === 0,
+      ),
     )
   })
 })
